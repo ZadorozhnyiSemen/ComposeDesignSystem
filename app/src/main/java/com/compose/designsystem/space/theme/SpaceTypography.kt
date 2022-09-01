@@ -2,9 +2,16 @@ package com.compose.designsystem.space.theme
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.compose.designsystem.R
+
+val PlexSans = FontFamily(
+    Font(R.font.plex_sans_regular, FontWeight.Normal),
+    Font(R.font.plex_sans_bold, FontWeight.Bold)
+)
 
 class SpaceTypography internal constructor(
     val d1: TextStyle,
@@ -19,7 +26,7 @@ class SpaceTypography internal constructor(
 ) {
 
     constructor(
-        defaultFontFamily: FontFamily = FontFamily.Default,
+        defaultFontFamily: FontFamily = PlexSans,
         d1: TextStyle = TextStyle(
             fontWeight = FontWeight.Bold,
             fontSize = 96.sp,
