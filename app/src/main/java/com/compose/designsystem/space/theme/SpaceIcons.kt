@@ -1,11 +1,11 @@
 package com.compose.designsystem.space.theme
 
-import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.compose.designsystem.R
+import com.compose.designsystem.space.atoms.Icon
 
 object SpaceIcons
 

@@ -192,3 +192,7 @@ fun lightSpaceColors(
 fun darkSpaceColors() = lightSpaceColors(isLight = false)
 
 internal val LocalColors = staticCompositionLocalOf { lightSpaceColors() }
+
+internal val LocalContentColor = compositionLocalOf { Color.Black }
+
+internal val LocalContentAlpha = compositionLocalOf { 1f }
