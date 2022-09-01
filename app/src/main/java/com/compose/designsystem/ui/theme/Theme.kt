@@ -5,27 +5,11 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import com.compose.designsystem.space.theme.*
 
-private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
-)
+private val DarkColorPalette = darkSpaceColors()
 
-private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
-)
+private val LightColorPalette = lightSpaceColors()
 
 @Composable
 fun ComposeDesignSystemTheme(
@@ -38,10 +22,10 @@ fun ComposeDesignSystemTheme(
         LightColorPalette
     }
 
-    MaterialTheme(
+    SpaceTheme(
         colors = colors,
-        typography = Typography,
-        shapes = Shapes,
+        typography = SpaceTypography(),
+        shapes = SpaceShapes(),
         content = content
     )
 }
