@@ -13,7 +13,7 @@ object SpaceIcons
 fun SpaceIcons.IcAccessTime(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),
@@ -27,7 +27,7 @@ fun SpaceIcons.IcAccessTime(
 fun SpaceIcons.IcAdd(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),
@@ -41,7 +41,7 @@ fun SpaceIcons.IcAdd(
 fun SpaceIcons.IcApps(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),
@@ -55,7 +55,7 @@ fun SpaceIcons.IcApps(
 fun SpaceIcons.IcArrowDropDown(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),
@@ -69,7 +69,7 @@ fun SpaceIcons.IcArrowDropDown(
 fun SpaceIcons.IcAttachMoney(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),
@@ -83,7 +83,7 @@ fun SpaceIcons.IcAttachMoney(
 fun SpaceIcons.IcCardTravel(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),
@@ -97,7 +97,7 @@ fun SpaceIcons.IcCardTravel(
 fun SpaceIcons.IcCheck(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),
@@ -111,7 +111,7 @@ fun SpaceIcons.IcCheck(
 fun SpaceIcons.IcCheckCircle(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),
@@ -125,7 +125,7 @@ fun SpaceIcons.IcCheckCircle(
 fun SpaceIcons.IcClose(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),
@@ -139,7 +139,7 @@ fun SpaceIcons.IcClose(
 fun SpaceIcons.IcContactSupport(
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = SpaceTheme.colors.shadesBlack,
+    tint: Color = Color.Unspecified,
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_access_time),

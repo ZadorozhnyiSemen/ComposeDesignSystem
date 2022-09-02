@@ -2,6 +2,7 @@ package com.compose.designsystem.space.theme
 
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.takeOrElse
 
 @Stable
 class SpaceColors(
@@ -190,6 +191,25 @@ fun lightSpaceColors(
 ): SpaceColors = SpaceColors(neutral_1, neutral_2, neutral_3, neutral_4, neutral_5, neutral_6, neutral_7, neutral_8, neutral_9, neutral_10, primary_1, primary_2, primary_3, primary_4, primary_5, success_1, success_2, success_3, success_4, success_5, error_1, error_2, error_3, error_4, error_5, warning_1, warning_2, warning_3, warning_4, warning_5, shadesBlack, shadesWhite, isLight)
 
 fun darkSpaceColors() = lightSpaceColors(isLight = false)
+
+@Composable
+@ReadOnlyComposable
+fun contentColorFor(backgroundColor: Color) =
+    SpaceTheme.colors.contentColorFor(backgroundColor).takeOrElse { LocalContentColor.current }
+
+private fun SpaceColors.contentColorFor(backgroundColor: Color): Color {
+    return when (backgroundColor) {
+        primary_4 -> shadesWhite
+        neutral_2 -> shadesBlack
+        error_2 -> error_4
+        success_4 -> shadesWhite
+        error_4 -> shadesWhite
+        warning_4 -> shadesBlack
+        shadesBlack -> shadesWhite
+        shadesWhite -> shadesBlack
+        else -> Color.Unspecified
+    }
+}
 
 internal val LocalColors = staticCompositionLocalOf { lightSpaceColors() }
 
