@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.takeOrElse
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
 import com.compose.designsystem.space.theme.LocalContentAlpha
 import com.compose.designsystem.space.theme.LocalContentColor
 import com.compose.designsystem.space.theme.SpaceTheme
@@ -18,7 +19,8 @@ fun Text(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    style: TextStyle = SpaceTheme.typography.h4
+    style: TextStyle = SpaceTheme.typography.h4,
+    textAlign: TextAlign = TextAlign.Center
 ) {
     val textColor = color.takeOrElse {
         style.color.takeOrElse {
@@ -26,11 +28,7 @@ fun Text(
         }
     }
 
-    val mergedStyle = style.merge(
-        SpaceTheme.typography.h4.copy(
-            color = textColor
-        )
-    )
+    val mergedStyle = style.copy(color = textColor, textAlign = textAlign)
 
     BasicText(
         text = text,
