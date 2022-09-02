@@ -52,6 +52,7 @@ class MainActivity : ComponentActivity() {
                     Spacer(modifier = Modifier.height(4.dp))
                     Button(
                         onClick = { },
+                        rounded = true,
                         iconLeft = { SpaceIcons.IcAdd(contentDescription = null) },
                         iconRight = { SpaceIcons.IcCheck(contentDescription = null) },
                     ) {
