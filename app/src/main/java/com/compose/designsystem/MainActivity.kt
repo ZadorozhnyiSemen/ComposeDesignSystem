@@ -8,14 +8,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.compose.designsystem.space.atoms.Button
-import com.compose.designsystem.space.atoms.ButtonType
-import com.compose.designsystem.space.atoms.Link
-import com.compose.designsystem.space.atoms.Text
+import com.compose.designsystem.space.atoms.*
 import com.compose.designsystem.space.theme.*
 import com.compose.designsystem.ui.theme.ComposeDesignSystemTheme
 
@@ -24,6 +21,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeDesignSystemTheme {
+                var text by remember {
+                    mutableStateOf("Input")
+                }
                 // A surface container using the 'background' color from the theme
                 Column {
                     Greeting("Android")
@@ -74,7 +74,19 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier.fillMaxWidth(),
                             style = SpaceTheme.typography.h3
                         )
+
                     }
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Input(
+                        text,
+                        {
+                            text = it
+                            println("nwe value $it")
+                        },
+                        leadingIcon = { SpaceIcons.IcCheck(contentDescription = null) },
+                        trailingIcon = { SpaceIcons.IcCheck(contentDescription = null) },
+                        inputType = InputType.Error,
+                    )
                 }
 
             }
