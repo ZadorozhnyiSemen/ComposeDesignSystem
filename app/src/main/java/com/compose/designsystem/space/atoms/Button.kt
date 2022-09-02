@@ -1,7 +1,6 @@
 package com.compose.designsystem.space.atoms
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.ProvideTextStyle
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier

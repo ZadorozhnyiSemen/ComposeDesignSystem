@@ -2,10 +2,14 @@ package com.compose.designsystem.space.atoms
 
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.compositionLocalOf
+import androidx.compose.runtime.structuralEqualityPolicy
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.takeOrElse
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
 import com.compose.designsystem.space.theme.LocalContentAlpha
 import com.compose.designsystem.space.theme.LocalContentColor
 import com.compose.designsystem.space.theme.SpaceTheme
@@ -35,3 +39,11 @@ fun Text(
         style = mergedStyle,
     )
 }
+
+@Composable
+fun ProvideTextStyle(value: TextStyle, content: @Composable () -> Unit) {
+    val mergedStyle = LocalTextStyle.current.merge(value)
+    CompositionLocalProvider(LocalTextStyle provides mergedStyle, content = content)
+}
+
+val LocalTextStyle = compositionLocalOf(structuralEqualityPolicy()) { TextStyle.Default }
