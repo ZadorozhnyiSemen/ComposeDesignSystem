@@ -30,7 +30,7 @@ fun SpaceIcons.IcAdd(
     tint: Color = Color.Unspecified,
 ) {
     Icon(
-        painter = painterResource(id = R.drawable.ic_access_time),
+        painter = painterResource(id = R.drawable.ic_add),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,
@@ -44,7 +44,7 @@ fun SpaceIcons.IcApps(
     tint: Color = Color.Unspecified,
 ) {
     Icon(
-        painter = painterResource(id = R.drawable.ic_access_time),
+        painter = painterResource(id = R.drawable.ic_apps),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,
@@ -58,7 +58,7 @@ fun SpaceIcons.IcArrowDropDown(
     tint: Color = Color.Unspecified,
 ) {
     Icon(
-        painter = painterResource(id = R.drawable.ic_access_time),
+        painter = painterResource(id = R.drawable.ic_arrow_drop_down),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,
@@ -72,7 +72,7 @@ fun SpaceIcons.IcAttachMoney(
     tint: Color = Color.Unspecified,
 ) {
     Icon(
-        painter = painterResource(id = R.drawable.ic_access_time),
+        painter = painterResource(id = R.drawable.ic_attach_money),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,
@@ -86,7 +86,7 @@ fun SpaceIcons.IcCardTravel(
     tint: Color = Color.Unspecified,
 ) {
     Icon(
-        painter = painterResource(id = R.drawable.ic_access_time),
+        painter = painterResource(id = R.drawable.ic_card_travel),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,
@@ -100,7 +100,7 @@ fun SpaceIcons.IcCheck(
     tint: Color = Color.Unspecified,
 ) {
     Icon(
-        painter = painterResource(id = R.drawable.ic_access_time),
+        painter = painterResource(id = R.drawable.ic_check),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,
@@ -114,7 +114,7 @@ fun SpaceIcons.IcCheckCircle(
     tint: Color = Color.Unspecified,
 ) {
     Icon(
-        painter = painterResource(id = R.drawable.ic_access_time),
+        painter = painterResource(id = R.drawable.ic_check_circle),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,
@@ -128,7 +128,7 @@ fun SpaceIcons.IcClose(
     tint: Color = Color.Unspecified,
 ) {
     Icon(
-        painter = painterResource(id = R.drawable.ic_access_time),
+        painter = painterResource(id = R.drawable.ic_close),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,
@@ -142,7 +142,7 @@ fun SpaceIcons.IcContactSupport(
     tint: Color = Color.Unspecified,
 ) {
     Icon(
-        painter = painterResource(id = R.drawable.ic_access_time),
+        painter = painterResource(id = R.drawable.ic_contact_support),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,
