@@ -87,6 +87,23 @@ class MainActivity : ComponentActivity() {
                         trailingIcon = { SpaceIcons.IcCheck(contentDescription = null) },
                         inputType = InputType.Error,
                     )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    IconButton(
+                        icon = { SpaceIcons.IcContactSupport(contentDescription = null) },
+                        onClick = {},
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    IconButton(
+                        icon = { SpaceIcons.IcContactSupport(contentDescription = null) },
+                        onClick = {},
+                        iconButtonType = IconButtonType.Secondary,
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    IconButton(
+                        icon = { SpaceIcons.IcAttachMoney(contentDescription = null) },
+                        onClick = {},
+                        iconButtonType = IconButtonType.Danger,
+                    )
                 }
 
             }
