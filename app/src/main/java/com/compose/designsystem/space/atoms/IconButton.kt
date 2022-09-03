@@ -1,9 +1,13 @@
 package com.compose.designsystem.space.atoms
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.unit.dp
 import com.compose.designsystem.space.theme.LocalContentColor
@@ -23,6 +27,7 @@ fun IconButton(
     icon: @Composable () -> Unit,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     iconButtonType: IconButtonType = IconButtonType.Default,
 ) {
     val backgroundColor = when (iconButtonType) {
@@ -39,6 +44,11 @@ fun IconButton(
         Layout(
             modifier = modifier.then(
                 Modifier.background(backgroundColor, SpaceTheme.shapes.large)
+                    .clickable(
+                        onClick = onClick,
+                        indication = null,
+                        interactionSource = interactionSource,
+                    )
             ),
             content = icon
         ) { measurables, constraints ->

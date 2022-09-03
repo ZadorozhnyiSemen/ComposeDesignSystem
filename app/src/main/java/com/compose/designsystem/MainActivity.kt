@@ -101,7 +101,9 @@ class MainActivity : ComponentActivity() {
                     Spacer(modifier = Modifier.height(4.dp))
                     IconButton(
                         icon = { SpaceIcons.IcAttachMoney(contentDescription = null) },
-                        onClick = {},
+                        onClick = {
+                            Toast.makeText(this@MainActivity, "Pressed", Toast.LENGTH_SHORT).show()
+                        },
                         iconButtonType = IconButtonType.Danger,
                     )
                 }
