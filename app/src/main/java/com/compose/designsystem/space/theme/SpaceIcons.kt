@@ -2,6 +2,7 @@ package com.compose.designsystem.space.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.compose.designsystem.R
@@ -19,6 +20,41 @@ fun SpaceIcons.IcAccessTime(
         painter = painterResource(id = R.drawable.ic_access_time),
         contentDescription = contentDescription,
         modifier = modifier,
+        tint = tint,
+    )
+}
+
+@Composable
+fun SpaceIcons.IcHeart(
+    contentDescription: String?,
+    modifier: Modifier = Modifier,
+    tint: Color = Color.Unspecified,
+) {
+    Icon(
+        painter = painterResource(id = R.drawable.ic_heart),
+        contentDescription = contentDescription,
+        modifier = modifier,
+        tint = tint,
+    )
+}
+
+@Composable
+fun SpaceIcons.IcKeyboardArrowDown(
+    contentDescription: String?,
+    modifier: Modifier = Modifier,
+    rotate: Boolean = false,
+    tint: Color = Color.Unspecified,
+) {
+    val rotation = if (rotate) {
+        Modifier.rotate(180f)
+    } else {
+        Modifier
+    }
+
+    Icon(
+        painter = painterResource(id = R.drawable.ic_keyboard_arrow_down),
+        contentDescription = contentDescription,
+        modifier = modifier.then(rotation),
         tint = tint,
     )
 }
@@ -143,6 +179,62 @@ fun SpaceIcons.IcContactSupport(
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_contact_support),
+        contentDescription = contentDescription,
+        modifier = modifier,
+        tint = tint,
+    )
+}
+
+@Composable
+fun SpaceIcons.IcCreditCard(
+    contentDescription: String?,
+    modifier: Modifier = Modifier,
+    tint: Color = Color.Unspecified,
+) {
+    Icon(
+        painter = painterResource(id = R.drawable.ic_credit_card),
+        contentDescription = contentDescription,
+        modifier = modifier,
+        tint = tint,
+    )
+}
+
+@Composable
+fun SpaceIcons.IcHome(
+    contentDescription: String?,
+    modifier: Modifier = Modifier,
+    tint: Color = Color.Unspecified,
+) {
+    Icon(
+        painter = painterResource(id = R.drawable.ic_home),
+        contentDescription = contentDescription,
+        modifier = modifier,
+        tint = tint,
+    )
+}
+
+@Composable
+fun SpaceIcons.IcLibraryBooks(
+    contentDescription: String?,
+    modifier: Modifier = Modifier,
+    tint: Color = Color.Unspecified,
+) {
+    Icon(
+        painter = painterResource(id = R.drawable.ic_library_books),
+        contentDescription = contentDescription,
+        modifier = modifier,
+        tint = tint,
+    )
+}
+
+@Composable
+fun SpaceIcons.IcPerson(
+    contentDescription: String?,
+    modifier: Modifier = Modifier,
+    tint: Color = Color.Unspecified,
+) {
+    Icon(
+        painter = painterResource(id = R.drawable.ic_person),
         contentDescription = contentDescription,
         modifier = modifier,
         tint = tint,

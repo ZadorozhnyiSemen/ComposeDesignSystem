@@ -12,7 +12,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.semantics
 import com.compose.designsystem.space.theme.LocalContentColor
 import com.compose.designsystem.space.theme.SpaceTheme
 import com.compose.designsystem.space.theme.contentColorFor
@@ -50,7 +52,33 @@ fun Surface(
     }
 }
 
-private fun Modifier.surface(
+@Composable
+fun Surface(
+    modifier: Modifier = Modifier,
+    shape: Shape = RectangleShape,
+    color: Color = SpaceTheme.colors.shadesWhite,
+    contentColor: Color = contentColorFor(color),
+    content: @Composable () -> Unit
+) {
+    CompositionLocalProvider(
+        LocalContentColor provides contentColor,
+    ) {
+        Box(
+            modifier = modifier
+                .surface(
+                    shape = shape,
+                    backgroundColor = color
+                )
+                .semantics(mergeDescendants = false) {}
+                .pointerInput(Unit) {},
+            propagateMinConstraints = true
+        ) {
+            content()
+        }
+    }
+}
+
+fun Modifier.surface(
     shape: Shape,
     backgroundColor: Color,
 ) = this

@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
 import com.compose.designsystem.space.theme.SpaceTheme
 
@@ -21,7 +22,7 @@ fun Button(
     enabled: Boolean = true,
     iconLeft: @Composable (() -> Unit)? = null,
     iconRight: @Composable (() -> Unit)? = null,
-    rounded: Boolean = false,
+    shape: Shape = RectangleShape,
     type: ButtonType = ButtonType.Primary,
     content: @Composable RowScope.() -> Unit,
 ) {
@@ -35,7 +36,7 @@ fun Button(
         onClick = onClick,
         modifier = modifier,
         enabled = enabled,
-        shape = if (rounded) SpaceTheme.shapes.large else RectangleShape,
+        shape = shape,
         color = color,
     ) {
         ProvideTextStyle(value = SpaceTheme.typography.h4) {

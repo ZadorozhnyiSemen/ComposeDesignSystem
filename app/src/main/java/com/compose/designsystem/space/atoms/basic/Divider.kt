@@ -1,4 +1,4 @@
-package com.compose.designsystem.space.atoms
+package com.compose.designsystem.space.atoms.basic
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

@@ -13,6 +13,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -36,6 +37,7 @@ fun Input(
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    shape: Shape = SpaceTheme.shapes.small,
     textStyle: TextStyle = SpaceTheme.typography.h4.copy(fontWeight = FontWeight.Normal),
     inputType: InputType = InputType.Default,
     leadingIcon: @Composable (() -> Unit)? = null,
@@ -62,7 +64,7 @@ fun Input(
         modifier = modifier
             .background(
                 color = SpaceTheme.colors.neutral_1,
-                shape = SpaceTheme.shapes.small,
+                shape = shape,
             )
             .defaultMinSize(
                 minWidth = MinWidth,
@@ -81,6 +83,7 @@ fun Input(
                 value = value,
                 inputType = inputType,
                 innerTextField = innerTextField,
+                shape = shape,
                 leadingIcon = leadingIcon,
                 trailingIcon = trailingIcon,
                 singleLine = false,
@@ -96,6 +99,7 @@ private fun InputDecoration(
     value: String,
     inputType: InputType,
     interactionSource: MutableInteractionSource,
+    shape: Shape,
     innerTextField: @Composable () -> Unit,
     leadingIcon: @Composable() (() -> Unit)? = null,
     trailingIcon: @Composable() (() -> Unit)? = null,
@@ -122,7 +126,7 @@ private fun InputDecoration(
     Box(
         modifier = Modifier.border(
             border = BorderStroke(borderSize, borderColor),
-            shape = SpaceTheme.shapes.small
+            shape = shape,
         )
     ) {
         Row(
