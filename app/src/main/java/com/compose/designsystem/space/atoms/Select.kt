@@ -13,6 +13,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.compose.designsystem.space.atoms.basic.Text
 import com.compose.designsystem.space.theme.IcKeyboardArrowDown
 import com.compose.designsystem.space.theme.SpaceIcons
 import com.compose.designsystem.space.theme.SpaceTheme

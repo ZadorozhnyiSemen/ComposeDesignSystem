@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.compose.designsystem.space.atoms.Surface
+import com.compose.designsystem.space.atoms.basic.Surface
 import com.compose.designsystem.space.theme.SpaceTheme
 import com.compose.designsystem.space.theme.contentColorFor
 

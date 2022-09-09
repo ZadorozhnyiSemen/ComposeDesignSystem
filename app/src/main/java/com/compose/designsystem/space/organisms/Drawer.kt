@@ -1,13 +1,12 @@
 package com.compose.designsystem.space.organisms
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.compose.designsystem.space.atoms.Divider
-import com.compose.designsystem.space.atoms.Surface
+import com.compose.designsystem.space.atoms.basic.Divider
+import com.compose.designsystem.space.atoms.basic.Surface
 import com.compose.designsystem.space.theme.SpaceTheme
 
 @Composable

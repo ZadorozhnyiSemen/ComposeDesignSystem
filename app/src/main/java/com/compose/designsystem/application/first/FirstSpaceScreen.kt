@@ -14,7 +14,7 @@ import com.compose.designsystem.application.first.domain.Transaction
 import com.compose.designsystem.application.first.domain.TransactionType
 import com.compose.designsystem.space.atoms.NavTab
 import com.compose.designsystem.space.atoms.Tab
-import com.compose.designsystem.space.atoms.Text
+import com.compose.designsystem.space.atoms.basic.Text
 import com.compose.designsystem.space.atoms.basic.Divider
 import com.compose.designsystem.space.molecules.NavBar
 import com.compose.designsystem.space.molecules.Tabs
@@ -33,11 +33,13 @@ fun FirstSpaceScreen() {
         mutableStateOf(0)
     }
 
-    val transaction by derivedStateOf {
-        when (selectedTab) {
-            0 -> { TransactionRepository.getAllTransactions() }
-            1 -> { TransactionRepository.getSales() }
-            else -> { TransactionRepository.getFunds() }
+    val transaction by remember(selectedTab) {
+        derivedStateOf {
+            when (selectedTab) {
+                0 -> { TransactionRepository.getAllTransactions() }
+                1 -> { TransactionRepository.getSales() }
+                else -> { TransactionRepository.getFunds() }
+            }
         }
     }
 

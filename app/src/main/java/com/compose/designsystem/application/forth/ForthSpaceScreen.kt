@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.compose.designsystem.space.atoms.Button
-import com.compose.designsystem.space.atoms.Text
+import com.compose.designsystem.space.atoms.basic.Text
 import com.compose.designsystem.space.molecules.InputGroup
 import com.compose.designsystem.space.molecules.SelectGroup
 import com.compose.designsystem.space.organisms.Form

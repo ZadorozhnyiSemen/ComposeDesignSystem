@@ -11,6 +11,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.compose.designsystem.space.atoms.basic.Divider
+import com.compose.designsystem.space.atoms.basic.Text
 import com.compose.designsystem.space.theme.LocalContentColor
 import com.compose.designsystem.space.theme.SpaceTheme
 

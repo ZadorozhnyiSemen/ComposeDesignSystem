@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import com.compose.designsystem.space.atoms.Avatar
 import com.compose.designsystem.space.atoms.AvatarStatus
 import com.compose.designsystem.space.atoms.Button
-import com.compose.designsystem.space.atoms.Text
+import com.compose.designsystem.space.atoms.basic.Text
 import com.compose.designsystem.space.theme.IcCheck
 import com.compose.designsystem.space.theme.SpaceIcons
 import com.compose.designsystem.space.theme.SpaceTheme

@@ -6,7 +6,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import com.compose.designsystem.space.atoms.Button
 import com.compose.designsystem.space.atoms.ButtonType
-import com.compose.designsystem.space.atoms.Text
+import com.compose.designsystem.space.atoms.basic.Text
 import com.compose.designsystem.space.organisms.Prompt
 import com.compose.designsystem.space.theme.SpaceTheme
 

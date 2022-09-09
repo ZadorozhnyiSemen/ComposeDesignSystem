@@ -6,7 +6,7 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.compose.designsystem.R
-import com.compose.designsystem.space.atoms.Icon
+import com.compose.designsystem.space.atoms.basic.Icon
 
 object SpaceIcons
 

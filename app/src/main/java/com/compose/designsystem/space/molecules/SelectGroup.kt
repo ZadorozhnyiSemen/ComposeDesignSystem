@@ -9,9 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.compose.designsystem.space.atoms.Input
 import com.compose.designsystem.space.atoms.Select
-import com.compose.designsystem.space.atoms.Text
+import com.compose.designsystem.space.atoms.basic.Text
 import com.compose.designsystem.space.theme.SpaceTheme
 
 @Composable

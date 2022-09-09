@@ -6,6 +6,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.dp
+import com.compose.designsystem.space.atoms.basic.Divider
+import com.compose.designsystem.space.atoms.basic.ProvideTextStyle
+import com.compose.designsystem.space.atoms.basic.Surface
 import com.compose.designsystem.space.theme.SpaceTheme
 
 sealed interface LinkType {

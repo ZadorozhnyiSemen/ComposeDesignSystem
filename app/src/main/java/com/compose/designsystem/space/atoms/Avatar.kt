@@ -17,6 +17,8 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.compose.designsystem.space.atoms.basic.Text
+import com.compose.designsystem.space.atoms.basic.surface
 import com.compose.designsystem.space.theme.SpaceTheme
 
 sealed interface AvatarStatus {
