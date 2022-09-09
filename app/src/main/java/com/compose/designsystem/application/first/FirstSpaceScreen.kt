@@ -12,10 +12,10 @@ import androidx.compose.ui.unit.dp
 import com.compose.designsystem.application.first.data.TransactionRepository
 import com.compose.designsystem.application.first.domain.Transaction
 import com.compose.designsystem.application.first.domain.TransactionType
-import com.compose.designsystem.space.atoms.Divider
 import com.compose.designsystem.space.atoms.NavTab
 import com.compose.designsystem.space.atoms.Tab
 import com.compose.designsystem.space.atoms.Text
+import com.compose.designsystem.space.atoms.basic.Divider
 import com.compose.designsystem.space.molecules.NavBar
 import com.compose.designsystem.space.molecules.Tabs
 import com.compose.designsystem.space.theme.*
@@ -24,29 +24,6 @@ data class NavTabItem(
     val id: Int,
     val icon: @Composable () -> Unit,
     val text: String,
-)
-
-private val navItems = listOf<NavTabItem>(
-    NavTabItem(
-        1,
-        { SpaceIcons.IcHome(contentDescription = null) },
-        "Home"
-    ),
-    NavTabItem(
-        2,
-        { SpaceIcons.IcCardTravel(contentDescription = null) },
-        "Shop"
-    ),
-    NavTabItem(
-        3,
-        { SpaceIcons.IcLibraryBooks(contentDescription = null) },
-        "History"
-    ),
-    NavTabItem(
-        4,
-        { SpaceIcons.IcPerson(contentDescription = null) },
-        "Account"
-    ),
 )
 
 @Composable
@@ -198,3 +175,26 @@ private fun TransactionItem(
     }
 
 }
+
+private val navItems = listOf<NavTabItem>(
+    NavTabItem(
+        1,
+        { SpaceIcons.IcHome(contentDescription = null) },
+        "Home"
+    ),
+    NavTabItem(
+        2,
+        { SpaceIcons.IcCardTravel(contentDescription = null) },
+        "Shop"
+    ),
+    NavTabItem(
+        3,
+        { SpaceIcons.IcLibraryBooks(contentDescription = null) },
+        "History"
+    ),
+    NavTabItem(
+        4,
+        { SpaceIcons.IcPerson(contentDescription = null) },
+        "Account"
+    ),
+)

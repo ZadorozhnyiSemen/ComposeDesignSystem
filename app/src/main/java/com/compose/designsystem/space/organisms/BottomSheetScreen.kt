@@ -18,23 +18,20 @@ fun BottomSheetScreen(
     content: @Composable () -> Unit,
 ) {
     BoxWithConstraints(modifier) {
-        val child = @Composable {
-            BottomSheetScreenStack(body = {
-                Column(Modifier.fillMaxSize()) {
-                    content()
-                }
-            }) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .shadow(elevation = sheetElevation, sheetShape, clip = false)
-                        .clip(sheetShape)
-                ) {
-                    sheetContent()
-                }
+        BottomSheetScreenStack(body = {
+            Column(Modifier.fillMaxSize()) {
+                content()
+            }
+        }) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .shadow(elevation = sheetElevation, sheetShape, clip = false)
+                    .clip(sheetShape)
+            ) {
+                sheetContent()
             }
         }
-        child()
     }
 }
 

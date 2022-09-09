@@ -33,7 +33,7 @@ fun Prompt(
                 .border(
                     width = 1.dp,
                     color = SpaceTheme.colors.neutral_2,
-                    shape = SpaceTheme.shapes.medium
+                    shape = SpaceTheme.shapes.medium,
                 )
                 .padding(
                     top = 16.dp,
