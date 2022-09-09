@@ -7,7 +7,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.unit.dp
 import com.compose.designsystem.space.theme.LocalContentColor
@@ -43,7 +42,8 @@ fun IconButton(
     ) {
         Layout(
             modifier = modifier.then(
-                Modifier.background(backgroundColor, SpaceTheme.shapes.large)
+                Modifier
+                    .background(backgroundColor, SpaceTheme.shapes.large)
                     .clickable(
                         onClick = onClick,
                         indication = null,

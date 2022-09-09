@@ -23,21 +23,24 @@ fun ThirdSpaceScreen() {
             description = "Are you sure?",
             secondaryButton = {
                 Button(onClick = { showPrompt = false }, type = ButtonType.Secondary) {
-                    Text("No", style = SpaceTheme.typography.h4.copy(
-                        color = SpaceTheme.colors.neutral_5
-                    ))
+                    Text(
+                        text = "No",
+                        style = SpaceTheme.typography.h4.copy(
+                            color = SpaceTheme.colors.neutral_5
+                        )
+                    )
                 }
             },
             primaryButton = {
                 Button(onClick = { showPrompt = false }, shape = SpaceTheme.shapes.small) {
-                    Text("Yes")
+                    Text(text = "Yes")
                 }
             },
             onDismiss = { showPrompt = false },
         )
     }
 
-    
+
     Box(Modifier.fillMaxSize()) {
         Button(onClick = { showPrompt = true }) {
             Text(text = "Show prompt")

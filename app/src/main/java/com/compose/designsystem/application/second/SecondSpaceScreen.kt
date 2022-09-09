@@ -33,11 +33,15 @@ fun SecondSpaceScreen() {
         Box(
             Modifier
                 .fillMaxSize()
-                .background(Color(0xFFCCCCF2))) {
+                .background(Color(0xFFCCCCF2))
+        ) {
             Image(
                 painter = painterResource(id = R.drawable.space),
                 contentDescription = null,
-                modifier = Modifier.align(Alignment.TopCenter).padding(top = 90.dp).size(240.dp)
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+                    .padding(top = 90.dp)
+                    .size(240.dp)
             )
         }
     }
@@ -48,7 +52,10 @@ private fun SecondScreenBottomSheet() {
     Drawer(
         title = {
             Row {
-                Text("Title", style = SpaceTheme.typography.h3)
+                Text(
+                    text = "Title",
+                    style = SpaceTheme.typography.h3,
+                )
                 Spacer(modifier = Modifier.weight(1f))
                 SpaceIcons.IcHeart(
                     modifier = Modifier.size(32.dp),
@@ -70,15 +77,25 @@ private fun SecondScreenBottomSheet() {
         },
         labels = {
             Button(onClick = {}, type = ButtonType.Secondary, shape = SpaceTheme.shapes.large) {
-                Text("Illustrations", style = SpaceTheme.typography.h4.copy(fontWeight = FontWeight.Normal))
+                Text(
+                    "Illustrations",
+                    style = SpaceTheme.typography.h4.copy(fontWeight = FontWeight.Normal)
+                )
             }
             Button(onClick = {}, type = ButtonType.Secondary, shape = SpaceTheme.shapes.large) {
-                Text("Cats", style = SpaceTheme.typography.h4.copy(fontWeight = FontWeight.Normal))
+                Text(
+                    text = "Cats",
+                    style = SpaceTheme.typography.h4.copy(fontWeight = FontWeight.Normal),
+                )
             }
         },
         actionButton = {
             Button(onClick = {}, shape = SpaceTheme.shapes.large) {
-                Text(text = "Download", style = SpaceTheme.typography.h3, modifier = Modifier.fillMaxWidth())
+                Text(
+                    text = "Download",
+                    style = SpaceTheme.typography.h3,
+                    modifier = Modifier.fillMaxWidth()
+                )
             }
         }
     )

@@ -54,12 +54,12 @@ fun Profile(
             ),
         )
         Spacer(modifier = Modifier.height(16.dp))
-        
+
         Button(
             onClick = {},
             shape = SpaceTheme.shapes.large,
             iconRight = if (profile.subscribed) {
-                {SpaceIcons.IcCheck(contentDescription = null)}
+                { SpaceIcons.IcCheck(contentDescription = null) }
             } else null) {
             Text(text = if (profile.subscribed) "Subscribed" else "Subscribe")
         }

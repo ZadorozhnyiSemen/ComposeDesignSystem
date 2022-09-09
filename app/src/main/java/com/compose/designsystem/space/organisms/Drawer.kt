@@ -31,7 +31,9 @@ fun Drawer(
         ) {
             Box(modifier = Modifier.fillMaxWidth()) {
                 Divider(
-                    modifier = Modifier.width(120.dp).align(Alignment.Center),
+                    modifier = Modifier
+                        .width(120.dp)
+                        .align(Alignment.Center),
                     color = SpaceTheme.colors.neutral_2,
                     thickness = 4.dp,
                 )

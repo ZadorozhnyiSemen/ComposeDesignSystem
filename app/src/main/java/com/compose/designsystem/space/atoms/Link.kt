@@ -28,7 +28,7 @@ fun Link(
     type: LinkType = LinkType.Primary,
     content: @Composable RowScope.() -> Unit,
 ) {
-    val color = when(type) {
+    val color = when (type) {
         LinkType.Primary -> SpaceTheme.colors.primary_4
         LinkType.Secondary -> SpaceTheme.colors.neutral_2
         LinkType.Danger -> SpaceTheme.colors.error_2

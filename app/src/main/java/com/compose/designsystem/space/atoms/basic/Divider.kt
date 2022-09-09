@@ -1,7 +1,10 @@
 package com.compose.designsystem.space.atoms.basic
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -28,7 +31,8 @@ fun Divider(
         thickness
     }
     Box(
-        modifier.then(indentMod)
+        modifier
+            .then(indentMod)
             .fillMaxWidth()
             .height(targetThickness)
             .background(color = color)

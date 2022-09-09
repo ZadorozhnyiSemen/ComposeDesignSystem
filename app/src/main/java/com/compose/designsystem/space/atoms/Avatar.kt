@@ -22,10 +22,10 @@ import com.compose.designsystem.space.atoms.basic.surface
 import com.compose.designsystem.space.theme.SpaceTheme
 
 sealed interface AvatarStatus {
-    object None: AvatarStatus
-    object Online: AvatarStatus
-    object Absent: AvatarStatus
-    object Busy: AvatarStatus
+    object None : AvatarStatus
+    object Online : AvatarStatus
+    object Absent : AvatarStatus
+    object Busy : AvatarStatus
 }
 
 @Composable
@@ -41,7 +41,9 @@ fun Avatar(
             .size(size)
     ) {
         Image(
-            modifier = Modifier.clip(shape).fillMaxSize(),
+            modifier = Modifier
+                .clip(shape)
+                .fillMaxSize(),
             painter = painter,
             contentDescription = null
         )
@@ -101,14 +103,15 @@ private fun Indicator(
         AvatarStatus.Busy -> SpaceTheme.colors.warning_4
         else -> Color.Unspecified
     }
-    
-    Box(modifier = modifier
-        .background(color, shape)
-        .size(size)
-        .border(
-            width = 2.dp,
-            color = SpaceTheme.colors.shadesWhite,
-            shape = shape
-        )
+
+    Box(
+        modifier = modifier
+            .background(color, shape)
+            .size(size)
+            .border(
+                width = 2.dp,
+                color = SpaceTheme.colors.shadesWhite,
+                shape = shape
+            )
     )
 }

@@ -41,12 +41,15 @@ fun Icon(
     }
 
     Box(
-        modifier.toolingGraphicsLayer().defaultSizeFor(painter)
+        modifier
+            .toolingGraphicsLayer()
+            .defaultSizeFor(painter)
             .paint(
                 painter,
                 colorFilter = colorFilter,
                 contentScale = ContentScale.Fit
-            ).then(semantics)
+            )
+            .then(semantics)
     )
 }
 

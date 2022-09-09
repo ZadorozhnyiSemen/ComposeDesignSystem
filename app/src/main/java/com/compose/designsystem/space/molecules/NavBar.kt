@@ -29,7 +29,8 @@ fun NavBar(
         modifier = modifier,
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
                 .height(NavBarHeight)
                 .selectableGroup()
                 .drawWithCache {

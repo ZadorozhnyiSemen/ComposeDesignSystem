@@ -28,7 +28,7 @@ fun Button(
     type: ButtonType = ButtonType.Primary,
     content: @Composable RowScope.() -> Unit,
 ) {
-    val color = when(type) {
+    val color = when (type) {
         ButtonType.Primary -> SpaceTheme.colors.primary_4
         ButtonType.Secondary -> SpaceTheme.colors.neutral_2
         ButtonType.Danger -> SpaceTheme.colors.error_2
